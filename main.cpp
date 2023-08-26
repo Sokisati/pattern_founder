@@ -10,9 +10,9 @@ int main() {
     aliveCellsArray[1] = 1;
     aliveCellsArray[2] = 3;
     aliveCellsArray[3] = 4;
-    aliveCellsArray[4] = 5;
-    aliveCellsArray[5] = 3;
-    aliveCellsArray[6] = 4;
+    aliveCellsArray[4] = 3;
+    aliveCellsArray[5] = 5;
+    aliveCellsArray[6] = 3;
     aliveCellsArray[7] = 7;
     aliveCellsArray[8] = 5;
     aliveCellsArray[9] = 8;
@@ -36,11 +36,12 @@ int main() {
     int limit = sizeof(aliveCellsArray)/sizeof(int);
 
 
-    int i,c,p;
+    int i,c,p,checkAgain,t;
     bool searchBool = false;
 
     i = 1;
     p = 0;
+    checkAgain = 1;
 
 
     for(i; i<limit; i++)
@@ -62,13 +63,21 @@ int main() {
                 p++;
                 if(i-c-p==0)
                 {
-                    //pattern found
-                    p = 0;
-                    for(p; i-c-p>0; p++)
+                    if(checkAgain<2)
                     {
-                        cout<<aliveCellsArray[i+p];
+                        checkAgain++;
+                     t = c;
+                     c = i;
+                     i = 2*i - t;
+                     p = 0;
                     }
-                    return 0;
+                    else {
+                        p = 0;
+                        for (p; i - c - p > 0; p++) {
+                            cout << aliveCellsArray[i + p];
+                        }
+                        return 0;
+                    }
                 }
                 
                 //pattern with period of above 8 are not possible within a 30x30 grid, hence the i-c>8
@@ -81,7 +90,11 @@ int main() {
         }
     }
 
-    cout<<"No pattern exists..."<<endl;
+
+
+
+
+
 
     return 0;
 }
