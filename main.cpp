@@ -10,17 +10,17 @@ int main() {
     aliveCellsArray[1] = 1;
     aliveCellsArray[2] = 3;
     aliveCellsArray[3] = 4;
-    aliveCellsArray[4] = 3;
-    aliveCellsArray[5] = 5;
-    aliveCellsArray[6] = 3;
-    aliveCellsArray[7] = 7;
-    aliveCellsArray[8] = 5;
+    aliveCellsArray[4] = 5;
+    aliveCellsArray[5] = 3;
+    aliveCellsArray[6] = 4;
+    aliveCellsArray[7] = 5;
+    aliveCellsArray[8] = 6;
     aliveCellsArray[9] = 8;
-    aliveCellsArray[10] = 7;
-    aliveCellsArray[11] = 5;
-    aliveCellsArray[12] = 7;
-    aliveCellsArray[13] = 10;
-    aliveCellsArray[14] = 5;
+    aliveCellsArray[10] = 8;
+    aliveCellsArray[11] = 8;
+    aliveCellsArray[12] = 4;
+    aliveCellsArray[13] = 5;
+    aliveCellsArray[14] = 3;
     aliveCellsArray[15] = 6;
     aliveCellsArray[16] = 8;
     aliveCellsArray[17] = 9;
@@ -47,6 +47,8 @@ int main() {
     for(i; i<limit; i++)
     {
         searchBool = false;
+        checkAgain = 1;
+
 
 
         for(c=i-1; c>1; c--)
@@ -92,7 +94,7 @@ int main() {
 
 
 
-
+cout<<"No pattern found..."<<endl;
 
 
 
