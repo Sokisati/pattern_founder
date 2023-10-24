@@ -74,3 +74,37 @@ vector<int> patternFinderFunction(vector<int> aliveCellsVector)
 
     return patternFound;
 }
+
+int main() {
+    srand(time(0));
+
+
+    vector<int> aliveCellsVector;
+    vector<int> mainPattern;
+
+    int randomNumber;
+
+    aliveCellsVector.push_back(6);
+    aliveCellsVector.push_back(8);
+    aliveCellsVector.push_back(9);
+    aliveCellsVector.push_back(7);
+    aliveCellsVector.push_back(8);
+    aliveCellsVector.push_back(9);
+    aliveCellsVector.push_back(4);
+    aliveCellsVector.push_back(8);
+    aliveCellsVector.push_back(9);
+    aliveCellsVector.push_back(7);
+    aliveCellsVector.push_back(6);
+
+
+
+        mainPattern = patternFinderFunction(aliveCellsVector);
+
+    for(int i=0; i<mainPattern.size(); i++)
+    {
+        cout<<mainPattern[i]<<" ";
+    }
+
+
+    return 0;
+}
