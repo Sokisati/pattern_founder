@@ -74,3 +74,31 @@ vector<int> patternFinderFunction(vector<int> aliveCellsVector)
 
     return patternFound;
 }
+
+int main()
+{
+    vector<int> testVector;
+    vector<int> foundedPattern;
+    testVector.push_back(0);
+    testVector.push_back(3);
+    testVector.push_back(2);
+    testVector.push_back(2);
+    testVector.push_back(3);
+    testVector.push_back(2);
+    testVector.push_back(2);
+    testVector.push_back(3);
+    testVector.push_back(2);
+    testVector.push_back(2);
+    testVector.push_back(3);
+    testVector.push_back(2);
+    testVector.push_back(2);
+
+    foundedPattern = patternFinderFunction(testVector);
+
+    for(int i=0; i<foundedPattern.size(); i++)
+    {
+        cout<<foundedPattern[i]<<" ";
+    }
+
+    return 0;
+}
